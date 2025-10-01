@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>Testside</title>
+  <style>
+    /* RETTET: Flyttet @import øverst */
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Relief&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Comic Relief", system-ui;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .page {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      position: fixed;
+      left: -100vw; /* starter udenfor skærmen */
+      transition: 1s ease-in-out all;
+      border: 1px solid steelblue; /* RETTET */
+      background-color: fuchsia; /* RETTET: baggrundfarve på .page */
+    }
+
+    .show {
+      left: 0; /* RETTET: gør element synligt */
+    }
+
+    #page2 {
+      grid-template-rows: 1fr 3fr;
+    }
+
+    #page2 .top {
+      width: 100%;
+      height: 50%; /* RETTET: lav højde, så top og bottom vises */
+      display: grid;
+      place-items: center;
+      background-color: fuchsia;
+    }
+
+    #page2 .bottom {
+      width: 100%;
+      height: 50%; /* RETTET */
+      display: grid;
+      place-items: center;
+      background-color: khaki;
+      background-image: url('assets/tomat.png'); /* sørg for korrekt sti */
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page show" id="page1">
+    <!-- Tom side, ingen tekst -->
+  </div>
+
+  <div class="page" id="page2">
+    <div class="top">
+      <!-- Tom top -->
+    </div>
+    <div class="bottom">
+      <!-- Tom bottom med billede som baggrund -->
+    </div>
+  </div>
+</body>
+</html>
