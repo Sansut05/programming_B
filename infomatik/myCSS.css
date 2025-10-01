@@ -1,0 +1,52 @@
+.side
+{
+    width: 100vw;
+    height: 100vh;
+    border: 0.3rem solid black;
+    overflow: hidden;
+    /* grid layout */
+    display: grid;
+    /* placer tekst og andet i midten */
+    place-items: center;
+    /* position fixed - klassen "show" viser pages */
+    position:fixed;
+
+    transition: 1s ease-in-out all;
+}
+
+.testtabel 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 700px;
+    td, th /* dette gælder for alle felter */
+    {
+        font-size: 15px;
+        border: 3px solid #000000;
+        padding: 8px;
+        text-align: center;
+    }
+    th /* det her er ekstra specielt for th */
+    {
+        font-size: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: #04AA6D;
+        color: white;
+    }
+}
+/* OPSÆTNING OG DEKORATION */
+.usynligtabel
+{
+    padding: 25px;
+}
+.overskrift
+{
+    padding: 25px;
+    font-size: 75;
+}
+.underOverskrift
+{
+    padding: 0px;
+    font-size: 30;
+}
